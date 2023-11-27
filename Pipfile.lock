@@ -1,10 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "773f8cdc585ef14daaa1cc32aafddcb459fbac4a07d61f22dd32b81395f7b2c1"
+            "sha256": "3e2793d3a90f171138d3708f4225920736179f854de5c5f3a060710ce4447dd6"
         },
         "pipfile-spec": 6,
         "requires": {
+            "flask_sqlalchemy": "*",
             "python_version": "3.12"
         },
         "sources": [

@@ -1,24 +1,26 @@
 import os
 
 from flask import Flask
+from app.extensions import db
 
-def create_app(test_config=None):
+def setup_models(app: Flask) -> None:
+    from app.models import Example
+
+    db.init_app(app)
+
+def create_app():
     app = Flask(__name__, instance_relative_config=True)
 
-    app.config.from_mapping(
-        SECRET_KEY='dev',
-        DATABASE=os.path.join(app.instance_path, '43c_website.sqlite'),
-    )
+    app.config.from_object("app.config.DevelopmentConfig")
 
-    if test_config is None:
-        app.config.from_pyfile('config.py', silent=True)
-    else:
-        app.config.from_mapping(test_config)
+    setup_models(app)
 
-    try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
+    with app.app_context():
+        db.create_all()
+
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return '404: Page not found', 404
 
     @app.route('/hello')
     def hello():
