@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>43c</title>
+
+    <link rel="icon" type="image/x-icon" href="/static/img/logo.png">
+
+    {% block head %}
+      <link rel="stylesheet" href="/static/style.css">
+    {% endblock %}
+    
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-2L3F7E510Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2L3F7E510Q');
+    </script> -->
+
+  </head>
+  <body>
+    <div class="header-main">
+        <div class="context-box">43c</div>
+    </div>
+    <div id ="menu-container">
+        <nav>
+            <ul id ="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    {% block body %}{% endblock %}
+
+    <script>
+    </script>
+  </body>
+</html>
