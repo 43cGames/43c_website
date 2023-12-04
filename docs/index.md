@@ -1,3 +1,3 @@
 <!-- basic index page -->
 
-# HEADING 1
+# landing blog

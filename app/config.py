@@ -3,7 +3,8 @@ class Config:
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql://user@localhost/foo'
+    SQLALCHEMY_DATABASE_URI = "sqlite:///database.db"
+    SECRET_KEY='dev'
 
 
 class DevelopmentConfig(Config):
