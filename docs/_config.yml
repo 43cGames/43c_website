@@ -4,3 +4,5 @@ plugins:
 
 title: [43c]
 description: [We make games]
+
+google_analytics: [Your Google Analytics tracking ID]
