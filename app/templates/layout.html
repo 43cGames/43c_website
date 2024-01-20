@@ -7,7 +7,7 @@
 
     <title>43c</title>
 
-    <link rel="icon" type="image/x-icon" href="/static/img/logo.png">
+    <link rel="icon" type="image/x-icon" href="/img/test_image.png">
 
     {% block head %}
       <link rel="stylesheet" href="/static/style.css">
@@ -24,19 +24,35 @@
     </script> -->
 
   </head>
-  <body>
-    <div class="header-main">
-        <div class="context-box">43c</div>
-    </div>
-    <div id ="menu-container">
-        <nav>
-            <ul id ="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="https://43cgames.github.io/43c_website/">Blog</a></li>
-                <li><a href="">About</a></li>
-            </ul>
-        </nav>
-    </div>
+
+  <div class="container">
+    <header>
+      <h1>Your Website Name</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Join</a></li>
+        </ul>
+    </nav>
+
+    <section>
+      <div class="left-column">
+          <img src="/img/test_image.png" alt="Your Image">
+      </div>
+      <div class="right-column">
+          <h2>Wisp shooting</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu ut aliquip ex ea comDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          <button>CTA</button>
+      </div>
+    </section>
+
+      <!-- Repeat the above structure for additional blog posts -->
+    </section>
+  </div>
     
     {% block body %}{% endblock %}
 
