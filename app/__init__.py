@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, Blueprint, render_template
 from app.extensions import db
 
 def setup_models(app: Flask) -> None:
@@ -8,10 +8,10 @@ def setup_models(app: Flask) -> None:
 
     db.init_app(app)
 
-def setup_blueprints(app: Flask) -> None:
-    from app.home_blueprint import home_blueprint
+# def setup_blueprints(app: Flask) -> None:
+#     from app.home_blueprint import home_blueprint
 
-    app.register_blueprint(home_blueprint)
+#     app.register_blueprint(home_blueprint)
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
@@ -19,7 +19,7 @@ def create_app():
     app.config.from_object("app.config.DevelopmentConfig")
 
     setup_models(app)
-    setup_blueprints(app)
+    # setup_blueprints(app)
 
     with app.app_context():
         db.create_all()
@@ -30,6 +30,6 @@ def create_app():
     
     @app.route('/')
     def index():
-        return 'Hello, World!'
+        return render_template("layout.html")
     
     return app

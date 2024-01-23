@@ -7,7 +7,7 @@
 
     <title>43c</title>
 
-    <link rel="icon" type="image/x-icon" href="/img/test_image.png">
+    <link rel="icon" type="image/x-icon" href="img/test_image.png">
 
     {% block head %}
       <link rel="stylesheet" href="/static/style.css">
@@ -40,17 +40,23 @@
     </nav>
 
     <section>
+      <div class="vertical-images">
+        <img src="{{ url_for('static', filename='img/pixel_bar.gif') }}" alt="Skinny Image 1">
+      </div>
+
       <div class="left-column">
-          <img src="/img/test_image.png" alt="Your Image">
+          <img src="{{ url_for('static', filename='img/image1.png') }}" alt="Image">
       </div>
       <div class="right-column">
           <h2>Wisp shooting</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu ut aliquip ex ea comDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
           <button>CTA</button>
       </div>
-    </section>
 
-      <!-- Repeat the above structure for additional blog posts -->
+      <div class="vertical-images">
+        <img src="{{ url_for('static', filename='img/pixel_bar.gif') }}" alt="Skinny Image 2">
+      </div>
+
     </section>
   </div>
     
